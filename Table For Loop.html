@@ -1,0 +1,75 @@
+<!Doctype HTML>
+
+<head>
+
+<title> Table For Loop </title>
+
+</head>
+
+<body>
+
+<p> <h1> Enter a Number for Table: </h1> </P>
+
+<input type= "text" id="num" name="num">
+
+<button type= "button" id="button1" name="button1" onclick= test2()> Click Here </button>
+
+<p id="demo"> </p>
+
+<script type="text/javascript">
+
+function test1()
+{
+
+debugger;
+
+var i, j=document.getElementById("num").value, text="";
+
+for(i=1; i<=10; i++)
+{
+
+text= text + j * i + "<br/>";
+
+document.getElementById("demo").innerHTML= text;
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+function test2()
+{
+
+debugger;
+
+var i, j=0, z= document.getElementById("num"), text="";
+
+for(i=1; i<=10; i++)
+{
+
+j= j + parseInt(z.value);
+
+text= text + j + "<br/>";
+
+
+document.getElementById("demo").innerHTML= text;
+
+//document.write(text + "<br>");	
+
+}
+} 
+
+</script>
+
+</body>
+
+</html>

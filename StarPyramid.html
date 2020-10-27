@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>StarPyramid</title>
+</head>
+<body>
+	<p id="pa" name="pa"></p>
+	<script type="text/javascript">
+		var i, j, point, result="";
+		document.getElementById('pa').innerHTML= "lol";
+		for(i=0; i<5; i++)
+		{
+			var star="";
+			for(j=1; j<=i; j++)
+			{
+				star= star + "*" + " ";
+			}
+			point= "* " + star;
+			result= result + point + "<br>"
+			document.getElementById('pa').innerHTML= result;
+		}
+for(i=4; i>0; i--)
+		{
+			var star="";
+			for(j=1; j<i; j++)
+			{
+				star= star + "*" + " ";
+			}
+			point= "* " + star;
+			result= result + point + "<br>"
+			document.getElementById('pa').innerHTML= result;
+		}
+	</script>
+</body>
+</html>

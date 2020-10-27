@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+	<style type="text/css">
+
+		.div{
+			border-style: solid;
+			border-width: 1px;
+			border-color: black;
+			width: 120px;
+			background-color: grey;
+			color: white;
+			overflow: hidden;
+		}
+
+		.result{
+			width: 120px;
+			color: white;
+			height: 90px;
+			overflow: hidden;
+		}
+		.show{
+			height: 20px;
+			text-align: right;
+			margin-bottom: 10px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" id="number">
+	<button id="btn" onclick="show()">Click</button>
+
+	<!-- <ul id="list"></ul> -->
+
+	<div class="div">
+		<div id="result" class="result"></div>
+		<p id="show" class="show" onclick="show()">Show More</p>
+	</div>
+
+<script type="text/javascript">
+
+	result();
+
+
+	function show()
+	{
+		// var time = 90;
+		
+		if(document.getElementById('show').innerText == "Show More")
+		{
+			let time = 90;
+			document.getElementById('show').innerHTML = "Show Less"	
+			var test = setInterval(function(){
+				time = time + 10;
+				document.getElementById('result').style.height = time + "px";
+				if (time == 200) 
+				{
+					clearInterval(test);
+				}
+			}, 30);
+		}
+
+		else if(document.getElementById('show').innerText == "Show Less")
+		{
+			let time = 200;
+			document.getElementById('show').innerHTML = "Show More"	
+			var test = setInterval(function(){
+				time = time - 10;
+				document.getElementById('result').style.height = time + "px";
+				if (time == 90) 
+				{
+					clearInterval(test);
+				}
+			}, 30);
+			// document.getElementById('result').style.height = "90px";
+		}
+	}
+
+		function result()
+		{
+			var name = ["Name1", "Name2","Name3", "Name4", "Name5", "Name6", "Name7", "Name8", "Name9", "Name10"];
+
+			var ul = document.createElement('ul');
+
+			for(var i = 0; i <= name.length - 1; i++)
+			{
+				var li = document.createElement('li');
+				li.appendChild(document.createTextNode(name[i]));
+				ul.appendChild(li);
+			}
+
+				console.log(ul)
+				var div = document.getElementById('result')
+				div.appendChild(ul);
+
+			
+			// num = c.length / 2;
+
+			// while(i <= num - 1)
+			// {
+			// 	console.log(c[a] + "-" + c[b]);
+			// 	a = a + 2;
+			// 	b = b + 2;
+			// 	i++;
+			// }
+
+			// for(i=1; i <= num; i++)
+			// {
+			// 	console.log(c[a] + "-" + c[b]);
+			// 	a = a + 2;
+			// 	b = b + 2;
+			// }
+		}
+
+	
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+
+
+body{
+	background-color: #F1C40F;
+}
+
+.box{
+	border-style: solid;
+	border-width: 10px;
+	border-radius: 10px;
+	border-color: #C70039;
+	width: 900px;
+	height: 500px;
+	margin-left: 210px;
+	margin-right: auto;
+	margin-top: 50px;
+	float: left;
+}
+
+
+.left{
+	background-color: #C70039;
+	border-radius: 10px;
+	height: 50px;
+	width: 70px;
+	margin: -300px 180px;
+	box-shadow: 5px 5px 50px;
+	float: left;
+}
+
+.leftarrow{
+	border-radius: 50px;
+	border-top: 15px solid transparent;
+	border-right: 30px solid white;
+	border-bottom: 15px solid transparent;
+	float: left;
+	margin-left: 17px;
+	margin-top: 10px;
+}
+
+.left:hover{
+	background-color: white;
+	border-style: solid;
+	border-color: #C70039;
+}
+
+.left:hover .leftarrow{;
+	border-right: 30px solid #C70039;
+}
+
+
+.right{
+	background-color: #C70039;
+	border-radius: 10px;
+	height: 50px;
+	width: 70px;
+	float: left;
+	margin: -305px 1090px;
+	box-shadow: 5px 5px 50px;
+}
+
+.rightarrow{
+	border-radius: 50px;
+	border-top: 15px solid transparent;
+	border-left: 30px solid white;
+	border-bottom: 15px solid transparent;
+	float: left;
+	margin-left: 22px;
+	margin-top: 10px;
+}
+
+.right:hover{
+	background-color: white;
+	border-style: solid;
+	border-color: #C70039;
+}
+
+.right:hover .rightarrow{
+	border-left: 30px solid #C70039;
+}

@@ -1,0 +1,72 @@
+<!Doctype HTML>
+
+<head>
+
+<title> Table while Loop </title>
+
+</head>
+
+<body>
+
+<p> <h1> Enter a Number for Table </h1> </p>
+
+<input type="text" id="num" name="num">
+
+<button id="bt" name="bt" onclick= test2()> Click Here </button>
+
+<p id="demo"> </p>
+
+<script>
+
+function test1()
+{
+
+var i=1, j=document.getElementById("num"), z=0, text="";
+
+debugger;
+
+while(i<=10)
+{
+
+z= z + parseInt(j.value);
+
+i++;
+
+text= text + z + "<br/>";
+
+document.getElementById("demo").innerHTML=text;
+
+}
+
+}
+
+
+
+
+
+
+function test2()
+{
+
+debugger;
+
+var i=1, j=document.getElementById("num").value, text="";
+
+while(i<=10)
+{
+
+text= text + j * i + "<br>";
+
+i++;
+
+document.getElementById("demo").innerHTML=text;
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>

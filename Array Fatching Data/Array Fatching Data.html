@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array Fatching Data</title>
+</head>
+<body>
+	<div>
+		<input type="text" id="text">
+		<button onclick="result()" id="btn">Click</button>
+		<ul id="list"></ul>
+		<p id="total"></p>
+	</div>
+
+	<script type="text/javascript">
+
+		var str = [], num = 0, i, total = 0, txt, mo = "0", add = 0;
+
+
+			var btn = document.getElementById('text');
+			btn.addEventListener('keydown', function(){
+				if (event.keyCode === 13) 
+				{
+					document.getElementById("btn").click();
+				}
+			})
+
+
+		function result()
+		{
+			if (document.getElementById('text').value == "") 
+			{
+				alert("Please Enter a Value");
+				return false;
+			}
+
+			str[num] = document.getElementById('text').value + " ";
+
+			var ul = document.getElementById('list');
+			
+			var li = document.createElement('li');
+			li.appendChild(document.createTextNode(str[num]))
+			ul.appendChild(li);
+
+			txt = str[num].split("");
+			document.getElementById('total').innerHTML = txt;
+
+			for(i = 0; i <= txt.length - 1; i++)
+			{
+				if (txt[i].match(/^[0-9]+$/)) 
+				{
+					mo = mo + txt[i];				}
+
+				else
+				{
+					add = add + parseInt(mo);
+					mo = "0";
+				}
+			}
+
+			total = total + add + parseInt(mo);
+			document.getElementById('total').innerHTML = "Total =" + " " + total;
+
+			document.getElementById('text').value = "";
+			num++;
+			mo = "0";
+			add = 0;
+		}
+
+	
+		
+	</script>
+
+</body>
+</html>

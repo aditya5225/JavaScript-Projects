@@ -1,0 +1,124 @@
+<!Doctype HTML>
+
+<head>
+
+<title> Sorting Odd & Even Number </title>
+
+</head>
+
+<body>
+
+<div>
+
+<p> <h1> Enter Number Here </h1> </p>
+
+<textarea id="ta" name="ta"></textarea>
+
+<button id="bt" name="bt" onclick="test()"> Click Here </button> <br> <br>
+
+<p> ODD NUMBERS </p>
+
+<label id="od" name="od"> </label>
+
+<p> EVEN NUMBERS </p>
+
+<label id="ev" name="ev"> </label>
+
+
+<script type="text/javascript">
+
+var i, num, text="", text2="";
+
+
+function test()
+{
+
+debugger;
+
+num= document.getElementById("ta").value.split(' ');
+
+for(i=0; i<num.length; i++)
+{
+
+if(isNaN(num[i]))
+{
+
+alert("Enter & Charectors Are Not Allowed!");
+
+break;
+
+}
+
+if(num[0] == "") 
+{
+
+alert("Start with number only, don't start with space!");
+
+break;
+
+}
+
+if(num[i] == "") 
+{
+
+alert("More Then One & Blank Spaces are Not Allowed!");
+
+break;
+
+}
+
+}
+
+if(i == num.length)
+{
+
+result()
+
+}
+
+}
+
+
+
+
+
+
+function result()
+{
+
+debugger;
+
+num= document.getElementById("ta").value.split(',');
+
+for(i=0; i<num.length; i++)
+{
+
+if(parseInt(num[i])%2)
+{
+
+text= text + num[i] + "<br/>";
+
+document.getElementById("od").innerHTML= text;
+
+}
+
+else
+{
+
+text2= text2 + num[i] + "<br/>";
+
+document.getElementById("ev").innerHTML= text2;
+
+}
+
+}
+
+}
+
+
+
+</script>
+
+</body>
+
+</HTML>
